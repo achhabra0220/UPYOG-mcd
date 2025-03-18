@@ -8,11 +8,11 @@ const alphabeticalSortFunctionForTenantsBasedOnName = (firstEl, secondEl) => {
     const firstCityName = firstEl.city.name.toUpperCase();
     const secondCityName = secondEl.city.name.toUpperCase();
 
-    // Check if either of the cities is "mcd"
-    const isFirstCityPG = firstCityName === "mcd";
-    const isSecondCityPG = secondCityName === "mcd";
+    // Check if either of the cities is "MCD"
+    const isFirstCityPG = firstCityName === "MCD";
+    const isSecondCityPG = secondCityName === "MCD";
 
-    // If the first city is "mcd", it should come after the second city
+    // If the first city is "MCD", it should come after the second city
     if (isFirstCityPG && !isSecondCityPG) {
         return 1; // firstEl (PG) comes after secondEl
     }
