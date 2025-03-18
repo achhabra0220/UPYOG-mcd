@@ -101,7 +101,7 @@ export const schema = {
 };
 
 export const mdmsSchema = {
-  tenantId: "pg",
+  tenantId: "mcd",
   code: "common-masters.StateInfo",
   description: "StateInfo",
   definition: {

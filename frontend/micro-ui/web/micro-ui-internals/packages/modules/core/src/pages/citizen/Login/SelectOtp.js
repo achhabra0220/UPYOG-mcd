@@ -68,7 +68,7 @@ const SelectOtp = ({ config, otp, onOtpChange, onResend, onSelect, t, error, use
       dob: response?.TokenRes?.dob.substring(0, 2) +"/"+response?.TokenRes?.dob.substring(2,4)+"/"+response?.TokenRes?.dob.substring(4, 8),
       mobileNumber: response?.TokenRes?.mobile,
       name: response?.TokenRes?.name,
-      tenantId: "pg",
+      tenantId: "mcd",
       userType: getUserType(),
     };
       sessionStorage.setItem("userName",response?.TokenRes?.mobile)
@@ -89,7 +89,7 @@ const SelectOtp = ({ config, otp, onOtpChange, onResend, onSelect, t, error, use
   };
   const sendOtp = async (data) => {
     try {
-      const res = await Digit.UserService.sendOtp(data, "pg");
+      const res = await Digit.UserService.sendOtp(data, "mcd");
       return [res, null];
     } catch (err) {
       return [null, err];
