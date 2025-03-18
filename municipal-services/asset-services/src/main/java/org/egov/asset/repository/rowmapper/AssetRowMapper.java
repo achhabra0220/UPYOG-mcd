@@ -72,6 +72,7 @@ public class AssetRowMapper implements ResultSetExtractor<List<Asset>> {
                         .purchaseCost(rs.getDouble("purchaseCost"))
                         .acquisitionCost(rs.getDouble("acquisitionCost"))
                         .bookValue(bookValue)
+                        .originalBookValue(rs.getDouble("originalBookValue"))
                         .invoiceDate(rs.getLong("invoiceDate"))
                         .invoiceNumber(rs.getString("invoiceNumber"))
                         .purchaseDate(rs.getLong("purchaseDate"))
@@ -82,6 +83,7 @@ public class AssetRowMapper implements ResultSetExtractor<List<Asset>> {
                         .assetUsage(rs.getString("assetUsage"))
                         .assetType(rs.getString("assetType"))
                         .assetStatus(rs.getString("assetStatus"))
+                        .assetAssignable(rs.getBoolean("assetAssignable"))
                         .build();
 
                 assetMap.put(id, currentAsset);

@@ -67,4 +67,3 @@ BEGIN
         ALTER TABLE eg_asset_auditdetails ADD COLUMN originalbookvalue BIGINT;
     END IF;
 END $$;
-
