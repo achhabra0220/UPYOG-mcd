@@ -54,7 +54,7 @@ const NewResponse = ({ data, onSuccess }) => {
       let formdata = Assetdata(data)
       
 
-      
+
       mutation.mutate(formdata, {
         onSuccess,
       });
